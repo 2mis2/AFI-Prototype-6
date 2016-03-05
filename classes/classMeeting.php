@@ -18,10 +18,36 @@ class classMeeting
 		// submit query
 		$result = $db -> query($statement);
 
-		return $result;
+		return $result 
+		}
 			
 	
 	} // end of list agents function	
+	
+	
+	public function updateMeeting($meetingDescription,$meetingDate,$meetingTime,$meetingAgenda){
+		
+		// build sql statements
+		$statement = "UPDATE meeting SET(meetingDescription, meetingDate, meetingTime, meetingAgenda) ";
+		$statement .= "VALUES (";
+		$statement .= "'".$meetingDescription."', '".$meetingDate."', '".$meetingTime."', '".$meetingAgenda."'";
+		$statement .= ")";
+		$statement .= "WHERE id = ($meetingID)";
+				
+		// set up Database connection
+		$db = new Db();
+
+		// submit query
+		$result = $db -> query($statement);
+
+		return $result;
+		
+			
+	
+	} // end of list agents function	
+	
+	
+	
 	
 	
 	
