@@ -46,7 +46,7 @@ Agenda:<br />
 	// if (isset($_POST['formType']))
 	
 	
-		include ("/report-controller.php");
+		include ("/meeting-controller.php");
 
 	// }
 }	
